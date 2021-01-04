@@ -4,7 +4,7 @@ require "yaml"
 def load_library(file)
   # code goes here
   lib = YAML.load_file(file)
-  lib.each do |k, v|
+  lib.each do |k|
     lib[k] = {:english => v[0], :japanese => v[1]}
   end
   return lib
